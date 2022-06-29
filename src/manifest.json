@@ -1,0 +1,20 @@
+{
+  "name": "Competishun Pro",
+  "description": "Helps you watch lectures in competishun web app.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://competishundigital.com/lectures"
+      ],
+      "js": [
+        "lectures.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
