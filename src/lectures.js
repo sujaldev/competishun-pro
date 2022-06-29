@@ -44,7 +44,7 @@ function update_current_time() {
 }
 
 function remove_watermark() {
-    $x("//div[text() = 'Sujal Singh']")[0].parentElement.remove()
+    $x("//video")[0].nextSibling.remove()
 }
 
 function check_new_video_element(mutations) {
