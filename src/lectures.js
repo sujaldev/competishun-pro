@@ -44,7 +44,8 @@ function update_current_time() {
 }
 
 function remove_watermark() {
-    $x("//video")[0].nextSibling.remove()
+    let watermark = $x("//video")[0].nextSibling;
+    watermark.parentElement.removeChild(watermark);
 }
 
 function check_new_video_element(mutations) {
