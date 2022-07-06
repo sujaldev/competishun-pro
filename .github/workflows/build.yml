@@ -32,12 +32,22 @@ jobs:
       - name: Build
         run: python3 build.py
 
+      - name: check for changes
+        run: |
+          if git diff --exit-code; then
+              echo "::set-env name=changes_exist::true"
+          else
+              echo "::set-env name=changes_exist::false"   
+          fi
+
       - name: Commit files
+        if: env.changes_exist == 'true'
         run: |
           git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git config --local user.name 'github-actions[bot]'
           git commit -m 'Daily auto build' -a
       - name: Push changes
+        if: env.changes_exist == 'true'
         uses: ad-m/github-push-action@master
         with:
           ssh: true
