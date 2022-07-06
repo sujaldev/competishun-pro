@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://sujal.tech/competishun"
+      }
+    },
+    "condition": {
+      "urlFilter": "umi.398207bb.js",
+      "domains": [
+        "competishundigital.com"
+      ],
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  }
+]

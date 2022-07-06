@@ -3,8 +3,22 @@
   "description": "Helps you watch lectures in competishun web app.",
   "version": "0.1.2",
   "manifest_version": 3,
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "permissions": [
-    "storage"
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "*://competishundigital.com/*"
   ],
   "content_scripts": [
     {
