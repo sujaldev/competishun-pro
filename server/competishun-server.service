@@ -1,0 +1,9 @@
+[Unit]
+Description=Competishun Script Modifying Server
+After=multi-user.target
+
+[Service]
+ExecStart="$HOME/.competishun-server/env/bin/python $HOME/.competishun-server/script_modifier_server.py"
+
+[Install]
+WantedBy=multi-user.target
