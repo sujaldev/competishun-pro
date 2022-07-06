@@ -33,12 +33,7 @@ jobs:
         run: python3 build.py
 
       - name: check for changes
-        run: |
-          if git diff --exit-code; then
-              echo "::set-env name=changes_exist::true"
-          else
-              echo "::set-env name=changes_exist::false"   
-          fi
+        run: echo "changes_exist=$(git diff --exit-code)" >> $GITHUB_ENV
 
       - name: Commit files
         if: env.changes_exist == 'true'
