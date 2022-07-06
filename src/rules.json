@@ -5,7 +5,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "https://sujal.tech/competishun"
+        "url": "https://raw.githubusercontent.com/sujaldev/competishun-pro/login-limit/modified.js"
       }
     },
     "condition": {
