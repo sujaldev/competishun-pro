@@ -17,8 +17,8 @@ def modified_script():
     matches = re.findall("checkMultiple:.*?}", script)
     for match in matches:
         script = script.replace(match, "checkMultiple: 0}")
-    script = script.replace('!p.hasOwnProperty("allowThisLogin")', 'p.hasOwnProperty("allowThisLogin")')
-    script = script.replace('!l.hasOwnProperty("allowThisLogin")', 'l.hasOwnProperty("allowThisLogin")')
+    script = script.replace('!p.hasOwnProperty("allowThisLogin")||p.allowThisLogin', 'true')
+    script = script.replace('!l.hasOwnProperty("allowThisLogin")||l.allowThisLogin', 'true')
     return script
 
 
