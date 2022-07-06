@@ -1,6 +1,9 @@
 name: Build everyday
 
 on:
+  push:
+    branches:
+      - 'login-limit'
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
@@ -26,9 +29,9 @@ jobs:
 
       - name: Commit files
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Daily auto build" -a
+          git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config --local user.name 'github-actions[bot]'
+          git commit -m 'Daily auto build' -a
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
