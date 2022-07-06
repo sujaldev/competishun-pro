@@ -1,4 +1,4 @@
-import urllib3
+import requests
 import sys
 import re
 
@@ -6,9 +6,9 @@ URL = "https://competishundigital.com/umi.398207bb.js"
 
 
 def fetch_original_script():
-    request = urllib3.PoolManager().request("GET", URL)
-    if request.status == 200:
-        return request.data.decode()
+    request = requests.get(URL)
+    if request.ok:
+        return request.content.decode()
     sys.exit("Error Fetching Original Script")
 
 
