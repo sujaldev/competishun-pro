@@ -1,7 +1,7 @@
 {
   "name": "Competishun Pro",
   "description": "Helps you watch lectures in competishun web app.",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "manifest_version": 3,
   "declarative_net_request": {
     "rule_resources": [
