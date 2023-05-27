@@ -1,5 +1,7 @@
 # Competishun Pro
 
+> **Note** I no longer have a subscription to competishun so I can't maintain this (if you're willing to provide one, I might consider reviving this project). And if you're wondering, I sucked at JEE because I was busy building stupid shit like this when I should've been studying.
+
 Chrome extension to help watch lectures in competishun web app.
 
 ### Features
